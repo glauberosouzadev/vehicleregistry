@@ -42,3 +42,6 @@ classDiagram
   - Contar veículos por ano de fabricação
   - Contar veículos por marca
   - Contar veículos cadastrados dentro de um intervalo de datas
+
+## Considerações finais
+- A collection do postman está disponibilizada na raiz desse projeto no arquivo chamado: [geren_veiculos.postman_collection.json](geren_veiculos.postman_collection.json)
