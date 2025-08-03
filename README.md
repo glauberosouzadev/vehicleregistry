@@ -16,27 +16,38 @@ Vehicle:
 ```mermaid
 classDiagram
   class Vehicle {
-    - vehicle: string
+    - vehicleType: string
+    - color : String
     - brand: string
-    - year: integer
+    - vyear: integer
     - description: string
-    - isSold: boolean
-    - created: datetime
-    - updated: datetime
+    - sold: boolean
+    - decade: integer
+    - createdAt: datetime
+    - updatedAt: datetime
   }
 ```
 
 ## Endpoints
  - **GET /veiculos**
 - **GET /veiculos?marca={marca}&ano={ano}&cor={cor}**
+- **GET /veiculos/not-sold**
+- **GET /veiculos/by-last-week**
+- **GET /veiculos/by-decade**
+- **GET /veiculos/by-brand**
 - **GET /veiculos/{id}**
 - **POST /veiculos**
 - **PUT /veiculos/{id}**
 - **PATCH /veiculos/{id}**
 - **DELETE /veiculos/{id}**
 
+
 ## Funcionalidades do Sistema
 - Cadastro completo de veículos com operações CRUD (Criar, Listar, Atualizar e Deletar)
+- Exibir quantos veiculos estão como não vendidos
+- Exibir veiculos por decada de fabricação
+- Exibir veiculos pela marca
+- Exibir veiculos que foram cadastrados dentro de uma semana
 - Persistência dos dados em banco de dados MySQL
 - Endpoints personalizados para:
   - Contar veículos por ano de fabricação
@@ -44,4 +55,6 @@ classDiagram
   - Contar veículos cadastrados dentro de um intervalo de datas
 
 ## Considerações finais
-- A collection do postman está disponibilizada na raiz desse projeto no arquivo chamado: [geren_veiculos.postman_collection.json](geren_veiculos.postman_collection.json)
+- A collection do postman está disponibilizada na raiz desse projeto no arquivo chamado: geren_veiculos.postman_collection.json
+- Foram adicionados testes de integração, além dos testes unitários, e customizadas anotações para validar casos específicos
+
